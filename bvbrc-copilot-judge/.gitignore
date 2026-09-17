@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Generated corpus - regenerate locally via mine_bvbrc_methods.py / mask_bvbrc_terms.py
+references/papers/*
+!references/papers/.gitkeep
+!references/papers/README.md
+references/papers_masked/*
+!references/papers_masked/.gitkeep
+
+# Per-run judge output - regenerate locally, not checked in
+work/judge_runs/*/
