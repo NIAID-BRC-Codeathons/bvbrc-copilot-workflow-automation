@@ -65,52 +65,7 @@ belongs to.
 
 Read the Methods section below. For each distinct computational or
 analytical step, decide which single BV-BRC service best corresponds to
-it — subject to the feasibility judgment above — if any of the following
-apply:
-
-- Comprehensive Genome Analysis
-- Genome Assembly Service
-- Genome Annotation Service / RASTtk
-- Similar Genome Finder
-- Proteome Comparison
-- Variation Analysis Service
-- Metagenomic Binning / Read Mapping
-- RNA-Seq / Transcriptomics Analysis Service
-- Phylogenetic Tree Building / Codon Tree / Gene Tree
-- CRISPR Finder
-- Subsystems
-- Specialty Genes
-- AMR Phenotype Prediction
-- Taxonomic Classification Service
-- Docking Service
-- Protein Family Sorter
-- Pathway / Comparative Pathway
-- p3-tools / PATRIC CLI / Data API
-- BLAST
-- Primer Design
-- Genome Alignment
-- Tn-Seq Analysis
-- Bacterial Genome Tree
-- Viral Genome Tree
-- Core Genome MLST
-- Whole Genome SNP Analysis
-- MSA and SNP Analysis
-- Meta-CATS
-- Protein Structure Prediction
-- Protein Stability Prediction
-- Comparative Systems
-- Mobile Element Detection
-- Expression Import
-- Fastq Utilities
-- ID Mapper
-- SARS-CoV-2 Genome Analysis
-- SARS-CoV-2 Wastewater Analysis
-- Influenza Sequence Submission
-- Influenza HA Subtype Conversion
-- Influenza Reassortment Analysis
-- Subspecies Classification
-- Viral Assembly
-- Outbreak Tracker
+it — subject to the feasibility judgment above.
 
 Output ONLY a JSON array, with no explanation, markdown, or text before
 or after it, in exactly this format:
@@ -126,8 +81,8 @@ Rules:
   authors did, in your own words, based on what the step accomplishes
   (e.g. "assembled paired-end Illumina reads into a draft genome") -- not
   a restatement of a tool name found in the text.
-- "bv_brc_service" is the single best-matching name from the list above,
-  copied verbatim, or the JSON value `null` if no service on the list
+- "bv_brc_service" is the single best-matching name from the list 
+  of BV-BRC services, or the JSON value `null` if no matching service
   applies to that step. Always include the key, even when its value is
   `null`.
 - Base the match on what the step does, not on whether a matching name
@@ -177,6 +132,10 @@ def query_copilot(prompt: str) -> str:
         for raw_line in resp.iter_lines(decode_unicode=True):
             if raw_line is None:
                 continue
+
+            if isinstance(raw_line, bytes):
+                raw_line = raw_line.decode("utf-8")
+            
             if raw_line.startswith(":"):
                 continue
             if raw_line.startswith("event:"):
