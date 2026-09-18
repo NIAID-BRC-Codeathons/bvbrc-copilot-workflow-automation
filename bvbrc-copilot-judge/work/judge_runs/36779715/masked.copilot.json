@@ -1,0 +1,10 @@
+[
+  {"step_description": "Base calling of Nanopore sequencing reads using Guppy software", "bv_brc_service": "genome_assembly"},
+  {"step_description": "Quality filtering of sequencing reads using Filtlong", "bv_brc_service": null},
+  {"step_description": "Assembly of filtered reads into a circular genome contig using Flye", "bv_brc_service": "genome_assembly"},
+  {"step_description": "Polishing of the assembled genome using Medaka", "bv_brc_service": "genome_assembly"},
+  {"step_description": "Automatic genome annotation using BV-BRC annotation service with PHANOTATE", "bv_brc_service": "genome_annotation"},
+  {"step_description": "Functional prediction of gene products using InterProScan", "bv_brc_service": "genome_annotation"},
+  {"step_description": "BLAST search of the genome against sequence databases", "bv_brc_service": "blast"},
+  {"step_description": "Read mapping to the assembly to assess coverage distribution", "bv_brc_service": null}
+]

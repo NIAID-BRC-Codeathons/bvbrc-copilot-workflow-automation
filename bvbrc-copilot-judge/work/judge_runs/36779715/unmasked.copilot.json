@@ -1,0 +1,11 @@
+[
+  {"step_description": "Converted raw Nanopore sequencing signal to FASTQ reads using Guppy base-calling software", "bv_brc_service": null},
+  {"step_description": "Filtered sequencing reads for quality using Filtlong", "bv_brc_service": "fastqutils"},
+  {"step_description": "Assembled filtered reads into a circular genome contig using Flye", "bv_brc_service": "viral_assembly"},
+  {"step_description": "Polished the assembled genome using Medaka", "bv_brc_service": null},
+  {"step_description": "Annotated the genome with gene predictions and functional annotations using BV-BRC's bacteriophage pipeline", "bv_brc_service": "genome_annotation"},
+  {"step_description": "Performed additional functional predictions using InterProScan and BLASTx", "bv_brc_service": "genome_annotation"},
+  {"step_description": "Attempted phage termini analysis using PhageTerm", "bv_brc_service": null},
+  {"step_description": "Mapped reads to the assembly to assess coverage distribution", "bv_brc_service": null},
+  {"step_description": "Conducted BLASTn search to compare the genome against public databases", "bv_brc_service": "blast"}
+]

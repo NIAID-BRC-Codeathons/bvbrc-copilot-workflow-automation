@@ -1,0 +1,30 @@
+[
+  {
+    "step_description": "Identified bacterial strains via 16S rRNA gene sequencing and analysis",
+    "bv_brc_service": "Taxonomic Classification Service"
+  },
+  {
+    "step_description": "Performed demultiplexing, quality control, and adapter trimming of Illumina sequencing reads",
+    "bv_brc_service": "Fastq Utilities"
+  },
+  {
+    "step_description": "Assembled paired-end Illumina reads into draft genomes using Unicycler",
+    "bv_brc_service": "Genome Assembly Service"
+  },
+  {
+    "step_description": "Assessed genome completeness and contamination using CheckM",
+    "bv_brc_service": null
+  },
+  {
+    "step_description": "Annotated prokaryotic genomes using NCBI Prokaryotic Genome Annotation Pipeline",
+    "bv_brc_service": "Genome Annotation Service / RASTtk"
+  },
+  {
+    "step_description": "Performed digital DNA-DNA hybridization analysis and species identification using TYGS",
+    "bv_brc_service": "Taxonomic Classification Service"
+  },
+  {
+    "step_description": "Calculated average nucleotide identity to compare genomes and assess species relatedness",
+    "bv_brc_service": "Similar Genome Finder"
+  }
+]

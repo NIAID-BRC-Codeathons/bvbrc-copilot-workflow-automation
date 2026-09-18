@@ -1,0 +1,14 @@
+[
+  {"step_description": "Collected river water, enriched it on PAO1, and isolated a plaque-purified phage lysate", "bv_brc_service": null},
+  {"step_description": "Extracted phage DNA with a commercial kit and prepared it for Nanopore sequencing", "bv_brc_service": null},
+  {"step_description": "Base-called raw Nanopore signal into FASTQ reads using Guppy", "bv_brc_service": null},
+  {"step_description": "Filtered reads for quality using Filtlong", "bv_brc_service": "fastq_utils"},
+  {"step_description": "Assembled filtered long reads into a single circular contig using Flye", "bv_brc_service": "viral_assembly"},
+  {"step_description": "Polished the draft assembly using Medaka to produce the final genome", "bv_brc_service": "viral_assembly"},
+  {"step_description": "Annotated the phage genome with gene calls and functional predictions using BV-BRC's bacteriophage annotation pipeline based on PHANOTATE", "bv_brc_service": "annotation"},
+  {"step_description": "Refined functional predictions for gene products using InterProScan protein domain analysis", "bv_brc_service": null},
+  {"step_description": "Refined functional predictions for gene products using an unnamed sequence-comparison tool, inferred to be a BLAST-style search", "bv_brc_service": "blast"},
+  {"step_description": "Attempted to determine genome termini and packaging mechanism using PhageTerm", "bv_brc_service": null},
+  {"step_description": "Mapped reads back to the assembly to assess coverage uniformity", "bv_brc_service": null},
+  {"step_description": "Searched the whole genome against public databases with an unnamed tool to identify related phages by sequence identity", "bv_brc_service": "blast"}
+]

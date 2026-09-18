@@ -1,0 +1,133 @@
+{
+  "pmid": "37948307",
+  "csv_keys": [
+    "annotation",
+    "assembly"
+  ],
+  "claude_keys": [
+    "annotation",
+    "assembly",
+    "fastq_utils",
+    "sgf",
+    "taxclass"
+  ],
+  "copilot_keys": [
+    "annotation",
+    "assembly",
+    "fastq_utils",
+    "sgf",
+    "taxclass"
+  ],
+  "claude_unresolved": [],
+  "copilot_unresolved": [],
+  "jaccard": {
+    "claude_vs_copilot": 1.0,
+    "claude_vs_csv": 0.4,
+    "copilot_vs_csv": 0.4,
+    "three_way": 0.4
+  },
+  "breakdown": {
+    "all_three_agree": [
+      "annotation",
+      "assembly"
+    ],
+    "claude_and_copilot_only": [
+      "fastq_utils",
+      "sgf",
+      "taxclass"
+    ],
+    "claude_and_csv_only": [],
+    "copilot_and_csv_only": [],
+    "claude_only": [],
+    "copilot_only": [],
+    "csv_only": []
+  },
+  "claude_detail": [
+    {
+      "step_description": "Identified bacterial strains via sequencing and analysis of 16S rRNA genes",
+      "raw_service": "Taxonomic Classification Service",
+      "resolved_key": "taxclass",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Demultiplexed, quality-controlled, and adapter-trimmed Illumina paired-end sequencing reads",
+      "raw_service": "Fastq Utilities",
+      "resolved_key": "fastq_utils",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Assembled paired-end Illumina reads into draft genomes using the BV-BRC genome assembly pipeline (Unicycler)",
+      "raw_service": "Genome Assembly Service",
+      "resolved_key": "assembly",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Assessed genome completeness and contamination using CheckM",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Annotated the draft genomes using the NCBI Prokaryotic Genome Annotation Pipeline",
+      "raw_service": "Genome Annotation Service / RASTtk",
+      "resolved_key": "annotation",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Performed digital DNA-DNA hybridization analysis via TYGS for species identification",
+      "raw_service": "Taxonomic Classification Service",
+      "resolved_key": "taxclass",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Calculated average nucleotide identity to compare genomes and assess species relatedness",
+      "raw_service": "Similar Genome Finder",
+      "resolved_key": "sgf",
+      "match_method": "exact"
+    }
+  ],
+  "copilot_detail": [
+    {
+      "step_description": "Identified bacterial strains via 16S rRNA gene sequencing and analysis",
+      "raw_service": "Taxonomic Classification Service",
+      "resolved_key": "taxclass",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Performed demultiplexing, quality control, and adapter trimming of Illumina sequencing reads",
+      "raw_service": "Fastq Utilities",
+      "resolved_key": "fastq_utils",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Assembled paired-end Illumina reads into draft genomes using Unicycler",
+      "raw_service": "Genome Assembly Service",
+      "resolved_key": "assembly",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Assessed genome completeness and contamination using CheckM",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Annotated prokaryotic genomes using NCBI Prokaryotic Genome Annotation Pipeline",
+      "raw_service": "Genome Annotation Service / RASTtk",
+      "resolved_key": "annotation",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Performed digital DNA-DNA hybridization analysis and species identification using TYGS",
+      "raw_service": "Taxonomic Classification Service",
+      "resolved_key": "taxclass",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Calculated average nucleotide identity to compare genomes and assess species relatedness",
+      "raw_service": "Similar Genome Finder",
+      "resolved_key": "sgf",
+      "match_method": "exact"
+    }
+  ]
+}
