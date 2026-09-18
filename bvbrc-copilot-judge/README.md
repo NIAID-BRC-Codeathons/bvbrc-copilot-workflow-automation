@@ -156,3 +156,12 @@ references/
   papers_masked/                     # generated corpus (gitignored)
 work/judge_runs/                     # per-PMID run output (gitignored)
 ```
+
+## Example
+
+`work/judge_runs/36779715` and `work/judge_runs/37948307` contain the examples of `/bvbrc-copilot-judge` skill runs.
+
+**Papers used for example reports:**
+
+- [Complete Genome Sequence of the Lysogenic *Pseudomonas* Bacteriophage Fyn8](work/judge_runs/36779715/report.md)
+- [Draft genome sequences of two Pseudomonas strains isolated from 129I plumes at the Hanford Site](work/judge_runs/37948307/report.md)

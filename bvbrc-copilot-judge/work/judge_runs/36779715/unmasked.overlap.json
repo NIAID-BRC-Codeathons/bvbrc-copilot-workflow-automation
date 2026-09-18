@@ -1,0 +1,174 @@
+{
+  "pmid": "36779715",
+  "csv_keys": [
+    "annotation",
+    "blast"
+  ],
+  "claude_keys": [
+    "annotation",
+    "blast",
+    "fastq_utils",
+    "viral_assembly"
+  ],
+  "copilot_keys": [
+    "annotation",
+    "blast",
+    "viral_assembly"
+  ],
+  "claude_unresolved": [],
+  "copilot_unresolved": [
+    "fastqutils"
+  ],
+  "jaccard": {
+    "claude_vs_copilot": 0.75,
+    "claude_vs_csv": 0.5,
+    "copilot_vs_csv": 0.667,
+    "three_way": 0.5
+  },
+  "breakdown": {
+    "all_three_agree": [
+      "annotation",
+      "blast"
+    ],
+    "claude_and_copilot_only": [
+      "viral_assembly"
+    ],
+    "claude_and_csv_only": [],
+    "copilot_and_csv_only": [],
+    "claude_only": [
+      "fastq_utils"
+    ],
+    "copilot_only": [],
+    "csv_only": []
+  },
+  "claude_detail": [
+    {
+      "step_description": "Collected river water, enriched it on PAO1, and isolated a plaque-purified phage lysate",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Extracted phage DNA with a commercial kit and prepared it for Nanopore sequencing",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Base-called raw Nanopore signal into FASTQ reads using Guppy",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Filtered reads for quality using Filtlong",
+      "raw_service": "fastq_utils",
+      "resolved_key": "fastq_utils",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Assembled filtered long reads into a single circular contig using Flye",
+      "raw_service": "viral_assembly",
+      "resolved_key": "viral_assembly",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Polished the draft assembly using Medaka to produce the final genome",
+      "raw_service": "viral_assembly",
+      "resolved_key": "viral_assembly",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Annotated the phage genome with gene calls and functional predictions using BV-BRC's bacteriophage annotation pipeline based on PHANOTATE",
+      "raw_service": "annotation",
+      "resolved_key": "annotation",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Refined functional predictions for gene products using InterProScan protein domain analysis",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Refined functional predictions for gene products using BLASTx protein-level sequence comparison",
+      "raw_service": "blast",
+      "resolved_key": "blast",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Attempted to determine genome termini and packaging mechanism using PhageTerm",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Mapped reads back to the assembly to assess coverage uniformity",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Searched the whole genome against public databases with BLASTn to identify related phages by sequence identity",
+      "raw_service": "blast",
+      "resolved_key": "blast",
+      "match_method": "exact"
+    }
+  ],
+  "copilot_detail": [
+    {
+      "step_description": "Converted raw Nanopore sequencing signal to FASTQ reads using Guppy base-calling software",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Filtered sequencing reads for quality using Filtlong",
+      "raw_service": "fastqutils",
+      "resolved_key": null,
+      "match_method": "no_csv_match"
+    },
+    {
+      "step_description": "Assembled filtered reads into a circular genome contig using Flye",
+      "raw_service": "viral_assembly",
+      "resolved_key": "viral_assembly",
+      "match_method": "exact"
+    },
+    {
+      "step_description": "Polished the assembled genome using Medaka",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Annotated the genome with gene predictions and functional annotations using BV-BRC's bacteriophage pipeline",
+      "raw_service": "genome_annotation",
+      "resolved_key": "annotation",
+      "match_method": "fuzzy:genome annotation service rasttk"
+    },
+    {
+      "step_description": "Performed additional functional predictions using InterProScan and BLASTx",
+      "raw_service": "genome_annotation",
+      "resolved_key": "annotation",
+      "match_method": "fuzzy:genome annotation service rasttk"
+    },
+    {
+      "step_description": "Attempted phage termini analysis using PhageTerm",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Mapped reads to the assembly to assess coverage distribution",
+      "raw_service": null,
+      "resolved_key": null,
+      "match_method": "null"
+    },
+    {
+      "step_description": "Conducted BLASTn search to compare the genome against public databases",
+      "raw_service": "blast",
+      "resolved_key": "blast",
+      "match_method": "exact"
+    }
+  ]
+}

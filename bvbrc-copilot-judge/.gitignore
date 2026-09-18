@@ -12,3 +12,5 @@ references/papers_masked/*
 
 # Per-run judge output - regenerate locally, not checked in
 work/judge_runs/*/
+!work/judge_runs/36779715/
+!work/judge_runs/37948307/
