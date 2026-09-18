@@ -1,9 +1,9 @@
 # bvbrc-copilot-judge
 
-Stage-1 AI-judge pipeline for the BV-BRC Copilot workflow-automation
+AI-judge pipeline for the BV-BRC Copilot workflow-automation
 benchmark: for a given paper (PMID), query **BV-BRC Copilot** and
-**Claude** independently for a step->BV-BRC-service JSON reconstruction
-of the Methods section, score both against a keyword-mined ground-truth
+**Claude** independently for a step-by-step BV-BRC-service JSON reconstruction
+of the Methods section, score both against a keyword-mined
 CSV (43 BV-BRC/PATRIC services), and report a numeric 3-way overlap
 (Claude vs. Copilot vs. CSV).
 
@@ -52,7 +52,7 @@ With this folder open in Claude Code, invoke the `bvbrc-copilot-judge`
 skill with a PMID that has a cached paper at
 `references/papers/<pmid>.txt`, e.g.:
 
-> Run the bvbrc-copilot-judge skill on PMID 37948307
+> /bvbrc-copilot-judge PMID 37948307
 
 Claude will orchestrate the full pipeline end to end per
 [`.claude/skills/bvbrc-copilot-judge/SKILL.md`](.claude/skills/bvbrc-copilot-judge/SKILL.md):
@@ -152,6 +152,7 @@ references/
   bv-brc-methods-mined.csv           # ground truth (43 services x paper)
   bv-brc-methods-mined-csv-schema.md # column documentation
   cite-bv-brc.csv                    # source paper list for the miner
-  papers/, papers_masked/            # generated corpus (gitignored)
+  papers/                            # generated corpus (gitignored)
+  papers_masked/                     # generated corpus (gitignored)
 work/judge_runs/                     # per-PMID run output (gitignored)
 ```

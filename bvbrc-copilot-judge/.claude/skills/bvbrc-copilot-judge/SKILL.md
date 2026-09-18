@@ -5,7 +5,7 @@ description: Run the full stage-1 AI-judge pipeline for one paper (PMID) - query
 
 # Purpose
 
-Orchestrates the stage-1 leg of a two-stage benchmark design end to end for
+Orchestrates the benchmark for
 a single PMID: get Copilot's and Claude's independent step->service JSON for
 the paper (unmasked, and masked if masking actually changed the text),
 score each against [bv-brc-methods-mined.csv](../../../references/bv-brc-methods-mined.csv)
@@ -16,16 +16,6 @@ The benchmark idea in one line: compare whether Copilot recognizes a
 BV-BRC service from its *function* in a paper's Methods section, or is
 just pattern-matching on the service's name appearing verbatim in the
 text - the masked run redacts service names to test which one it's doing.
-
-This wraps three existing pieces rather than reimplementing them:
-- [compare-with-copilot](../compare-with-copilot/SKILL.md) -
-  the Claude-vs-Copilot bullet-comparison prompt (used here as the source
-  of Claude's own read and the raw comparison bullets, not as a
-  standalone entry point).
-- [scripts/score_stage1_json.py](../../../scripts/score_stage1_json.py) - scores
-  one model's JSON against the CSV.
-- [scripts/judge_overlap.py](../../../scripts/judge_overlap.py) - the 3-way
-  Claude/Copilot/CSV set-overlap metric this skill adds on top.
 
 Full pipeline rationale, file layout, and how to read the outputs:
 [work/judge_runs/README.md](../../../work/judge_runs/README.md) - read it once if
